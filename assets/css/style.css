@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* agar scroll nya pelan */
 }
 
 body {
@@ -13,13 +13,13 @@ body {
 }
 
 .container {
-  padding: 0 100px;
+  padding: 0 100px; /* jarak konten dengan garis luar */
 }
 
 .hero {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; /* agar otomatis feeds */
+  align-items: center; /* akan manjadi center Y */
 }
 
 .hero-left h1 {
@@ -35,7 +35,7 @@ body {
   color: black;
   margin-bottom: 2rem;
 }
-.hero-right .hero-img {
+.hero-right .hero-img { /* di dalam class hero-right ada hero-img (panggilan selector yang lebih spesifik) */
   width: 500px;
 }
 
@@ -95,20 +95,20 @@ header .nav-links li a:hover {
 }
 
 header .nav-links li:last-child {
-  margin-right: 0;
+  margin-right: 0; /* tag left agar jarak konten li dengan li yang lain dikasi jarak */
 }
 
 header .hamburger-menu {
   display: none;
   font-size: 1.5rem;
   color: black;
-  cursor: pointer;
+  cursor: pointer; /* cursor akan berbuah menjadi garis tunjuk*/
 }
 
 /* line */
-header .hamburger-menu .line1,
-header .hamburger-menu .line2,
-header .hamburger-menu .line3 {
+header .hamburger-menu .line1, /* garis responsive 1*/
+header .hamburger-menu .line2, /*garis responsive 2*/
+header .hamburger-menu .line3 { /*garis responsive 3 */
   width: 25px;
   height: 3px;
   background-color: black;
@@ -116,8 +116,10 @@ header .hamburger-menu .line3 {
   border-radius: 5px;
 }
 
-header .hamburger-menu.active .line1 {
+header .hamburger-menu.active .line1 { /* tag active agar ketika di klik java script akan active*/
   transform: rotate(-45deg) translate(-5px, 6px);
+  /* tag transform berguna untuk membuat transisi pada hamburger menu saat diklik */
+  /* tag rotate agar saat hamburger menu diklik dia berubah menjadi miring */
 }
 
 header .hamburger-menu.active .line2 {
@@ -137,10 +139,10 @@ header .hamburger-menu.active .line3 {
   background-color: rgb(255, 221, 227);
   padding: 1rem 2rem;
   display: block;
-  flex-direction: column;
+  flex-direction: column; /* agar garis dikanan akan jadi 1 kolom */ 
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* agar ada shadow pada font*/
   transform: translateX(-100%);
   transition: transform 0.5s ease-in-out;
 }
@@ -202,7 +204,7 @@ header .hamburger-menu.active .line3 {
 .recent-work .heading .information {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 20px; /* jarak antar konten pada parents */
 }
 .recent-work .heading .information p {
   font-size: 1rem;
@@ -584,7 +586,7 @@ footer .social-media a:hover {
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    /* paddimg */
+    /* padding */
     padding: 30px;
   }
 
